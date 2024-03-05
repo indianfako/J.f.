@@ -1,0 +1,13 @@
+import hashlib
+
+def generate-md5(text):
+    # Create a MD5 object
+    md5 = hashlib.md5()
+    # Encode the text and update the hash
+    md5.update(text.encode())
+    # Return the hex digest
+    return md5.hexdigest()
+
+# Test the function with some text
+text = "48569244d73810d0110772370d39621c509c2b0d"
+print(generate-md5(text))
